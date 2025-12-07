@@ -5,6 +5,11 @@ This is a quick and dirty COFF loader (AKA Beacon Object Files). Currently can r
 The main goal is to provide a working example and maybe be useful to someone.
 
 
+## Build
+```
+x86_64-w64-mingw32-gcc -shared -o COFFLoader64.dll COFFLoader.c beacon_compatibility.c wrapper.c -luser32 -lkernel32 -Wl,--out-implib,libCOFFLoader64.a
+```
+
 ## Parts
 There are a few parts to it they are listed below.
 
